@@ -1,3 +1,8 @@
+:root{
+  --main-color: #F4CE14;
+  --secondary-color: #495E57
+}
+
 .App {
   text-align: center;
 }
@@ -36,3 +41,98 @@
     transform: rotate(360deg);
   }
 }
+
+#root{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin: 0 2rem;
+
+}
+
+header{
+  grid-column: 3 / span 8;
+  display: flex;
+  flex-direction: row;
+  font-family: Karla, sans-serif;
+  /* font-weight: bold; */
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+
+nav > ul{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+li{
+  list-style: none;
+}
+
+main{
+  min-height: fit-content;
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  grid-column: 1 / span 12;
+}
+
+.hero{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  font-family: 'Markazi Text', serif;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+}
+
+.hero-entrance{
+  display: flex;
+  flex-direction: column;
+  grid-column: 3 /span 4;
+}
+
+.hero-entrance > h1{
+  color: var(--main-color);
+  font-size: 40px;
+  font-weight: 100;
+  margin: 0;
+}
+
+.hero-entrance > h2{
+  color: white;
+  /* font-size: 40px; */
+  font-weight: 100;
+  margin: 0;
+}
+
+.hero-entrance > p{
+  color: white;
+  /* font-size: 40px; */
+  font-weight: 100;
+  margin: 0;
+  width: 50%;
+}
+
+.hero-image{
+  max-height: 30vh;
+  /* max-width: 20vw; */
+  grid-column: 8 / span 3;
+}
+
+.hero-image > img{
+  width: 100%;
+  border-radius: 16px;
+  height: 150%;
+}
+
+
