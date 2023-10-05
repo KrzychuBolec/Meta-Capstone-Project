@@ -1,21 +1,22 @@
-// import logo from './logo.svg';
+import { Nav } from './Nav';
+import { Header } from './Header';
+import { Main } from './Main';
+import { Footer } from './Footer';
+import Logo from "./Logo.svg"
 import './App.css';
 
 function App() {
   return (
     <>
-      <header>
+      <Header>
+        <img src={Logo} alt='Little Lemon Logo'></img>
+        <Nav />
         
-      </header>
-      <nav>
+      </Header>
+      <Main>
 
-      </nav>
-      <main>
-
-      </main>
-      <footer>
-
-      </footer>
+      </Main>
+      <Footer />
     </>
   );
 }
