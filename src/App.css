@@ -56,6 +56,7 @@ header{
 
 nav{
   width: 100%;
+  font-family: Karla, sans-serif;
 }
 
 nav > ul{
@@ -71,6 +72,15 @@ nav > ul{
 
 li{
   list-style: none;
+}
+
+p{
+  font-family: Karla, sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
 }
 
 main{
@@ -110,6 +120,7 @@ main{
   /* font-size: 40px; */
   font-weight: 100;
   margin: 0;
+
 }
 
 .mainButton{
@@ -117,8 +128,10 @@ main{
   border-radius: 16px;
   font-weight: 700;
   border: none;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   width: fit-content;
+  margin-top: auto;
+  font-family: Karla;
 }
 
 .hero-image{
@@ -130,7 +143,103 @@ main{
 .hero-image > img{
   width: 100%;
   border-radius: 16px;
-  height: 150%;
+  max-height: 120%;
 }
+
+.formWrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary-color);
+  padding: 1rem 0;
+}
+
+form{
+  margin: 1rem;
+  font-family: Karla, sans-serif;
+}
+
+input, select{
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: none;
+}
+
+label{
+  color: white;
+}
+
+.specials{
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.specials-header{
+  font-family: 'Markazi Text', serif;
+}
+
+.specials-cards{
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-special{
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  width: 25%;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.296);
+}
+
+.card-description {
+  padding: 1rem;
+  height: 70%;
+  background-color: #edefee;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-description > h5 {
+  font-family: 'Markazi Text', serif;
+  font-weight: bold;
+}
+
+.card-description > p {
+  font-size: 16px;
+  text-overflow: ellipsis;
+}
+
+.card-image{
+  width: 100%;
+  height: 30%;
+  object-fit: cover;
+}
+
+footer{
+  padding: 1rem;
+  background-color: var(--secondary-color);
+  overflow: hidden;
+  flex-direction: row;
+}
+
+.footer-img {
+  width: initial;
+}
+
+.footer-nav{
+  width: fit-content;
+  padding: 1rem;
+}
+
+.footer-nav > ul {
+  flex-direction: column;
+  text-align: start;
+  align-items: baseline;
+  gap: 0;
+  color: white;
+}
+
 
 

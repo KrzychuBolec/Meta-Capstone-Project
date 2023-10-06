@@ -1,4 +1,5 @@
 
+import { Link } from "react-router-dom";
 
 export const Nav = (props) =>{
 
@@ -7,15 +8,15 @@ export const Nav = (props) =>{
 
 
     return (
-        <nav>
+        <nav className={props.classList}>
             <ul>
 
             {Links.map(link=>{
                 return (
                     <li key={link}>
-                        <a>
+                        <Link to={`/${link}`}>
                             {link}
-                        </a>
+                        </Link>
                     </li>
                 )
             })}

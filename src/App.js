@@ -1,24 +1,29 @@
-import { Nav } from './Nav';
-import { Header } from './Header';
-import { Main } from './Main';
+import { Nav } from './components/Header/Nav';
+import { Header } from './components/Header/Header';
+import { Main } from './components/Main/Main';
 import { Footer } from './Footer';
 import Logo from "./Logo.svg"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Homepage from './Homepage';
+import Booking from './Booking';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Header>
-        <img src={Logo} alt='Little Lemon Logo'></img>
-        <Nav />
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Homepage />}>
         
-      </Header>
-      <Main>
-
-      </Main>
-      <Footer />
-    </>
+        <Route index element={<Homepage />} />
+        {/* <Route path="blogs" element={<Blogs />} />
+        // <Route path="contact" element={<Contact />} />
+        // <Route path="*" element={<NoPage />} /> */}
+      </Route>
+      <Route path="Home" element={<Homepage />}></Route>
+      <Route path='Reservations' element={<Booking />} />
+    </Routes>
+  </BrowserRouter>
   );
 }
 
