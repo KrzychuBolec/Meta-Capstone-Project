@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 export const Card = (props) =>{
 
     return (
@@ -9,7 +11,9 @@ export const Card = (props) =>{
                 {props.children}
 
                 <button className="mainButton">
-                    Order a delivery
+                    <Link to={"/Order"}>
+                        Order a delivery
+                    </Link>
                 </button>
 
             </div>

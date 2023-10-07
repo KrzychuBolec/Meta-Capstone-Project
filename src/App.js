@@ -1,14 +1,11 @@
-import { Nav } from './components/Header/Nav';
-import { Header } from './components/Header/Header';
-import { Main } from './components/Main/Main';
-import { Footer } from './Footer';
-import Logo from "./Logo.svg"
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Homepage from './Homepage';
 import Booking from './Booking';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Confirmation from './Confirmation';
+import Construction from './Construction';
 
 function App() {
   return (
@@ -24,6 +21,7 @@ function App() {
       <Route path="Home" element={<Homepage />}></Route>
       <Route path='Reservations' element={<Booking />} />
       <Route path='Confirmation' element={<Confirmation />} />
+      <Route path='*' element={<Construction />} />
     </Routes>
   </BrowserRouter>
   );

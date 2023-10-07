@@ -6,7 +6,7 @@ export const Hero = (props) =>{
     return (
 
         <section className="hero row d-flex flex-row">
-                <div className="hero-entrance col-4 offset-1">
+                <div className="hero-entrance col-xs-6 col-md-6 col-lg-4 offset-lg-1">
 
                     <h1>
                     Little Lemon
@@ -27,7 +27,7 @@ export const Hero = (props) =>{
                     </button>
 
                 </div>
-                <div className="hero-image col-3 offset-2">
+                <div className="hero-image col-xs-6 col-md-6 col-lg-3 offset-lg-2">
                     <img src={foodPhoto}>
                     </img>
                 </div>

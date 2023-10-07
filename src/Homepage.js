@@ -5,14 +5,20 @@ import { Footer } from './Footer';
 import Logo from "./Logo.svg"
 import { Hero } from './components/Main/Hero';
 import { Specials } from './components/Main/Specials';
+import { BurgerNav } from './components/Header/BurgerNav';
+import { Link } from 'react-router-dom';
 
 function Homepage() {
   return (
     <>
       <Header>
-        <img src={Logo} alt='Little Lemon Logo'></img>
-        <Nav />
         
+          <Link to={"/home"}>
+          <img src={Logo} alt='Little Lemon Logo'></img>
+          </Link>
+        
+        <Nav />
+        <BurgerNav />
       </Header>
       <Main>
         <Hero />
