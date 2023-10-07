@@ -5,27 +5,8 @@ import { Footer } from './Footer';
 import Logo from "./Logo.svg"
 import BookingForm from './BookingForm';
 import { Specials } from './components/Main/Specials';
-import {useTime } from './Reducer';
-import { useNavigate } from 'react-router-dom';
-import { submitAPI } from './api';
 
-function Booking() {
-
-  const [availableTimes,dispatch] = useTime()
-
-  const navigate = useNavigate()
-
-  function submitForm(form){
-
-
-    const result = submitAPI(form)
-
-    if(result){
-      navigate("/Confirmation")
-    }
-
-
-  }
+function Confirmation() {
 
   return (
     <>
@@ -35,7 +16,7 @@ function Booking() {
         
       </Header>
       <Main>
-        <BookingForm availableTimes={availableTimes} changeHandler={dispatch} submitForm ={submitForm} />
+        <h1>CONFIRMED</h1>
         <Specials /> 
 
       </Main>
@@ -44,4 +25,4 @@ function Booking() {
   );
 }
 
-export default Booking;
+export default Confirmation;

@@ -8,6 +8,7 @@ import './App.css';
 import Homepage from './Homepage';
 import Booking from './Booking';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Confirmation from './Confirmation';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       </Route>
       <Route path="Home" element={<Homepage />}></Route>
       <Route path='Reservations' element={<Booking />} />
+      <Route path='Confirmation' element={<Confirmation />} />
     </Routes>
   </BrowserRouter>
   );
