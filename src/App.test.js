@@ -52,7 +52,6 @@ test("Form submittance",async()=>{
 test("Initialize times and dispatch",async()=>{
 
   let result = []
-
   function Component(){
 
       const [initialValues, dispatch] = useTime()
@@ -70,9 +69,43 @@ test("Initialize times and dispatch",async()=>{
       result = initialValues
 
   }
-
   render(<Component />)
-
   expect(result.length > 0).toBe(true)
 
 })
+
+test("Checking validation presence",async ()=>{
+
+  const mockSubmit = jest.fn()
+  const mockFunc = jest.fn()
+
+  const {getByLabelText, queryByText, getByRole, container} = render(<BookingForm availableTimes={testTimes} submitForm={mockSubmit} changeHandler={mockFunc}/>);
+
+  await act(async ()=>{
+    fireEvent.change(getByLabelText("Choose date"),{target:{value:"rrrr-12-12"}})
+
+  })
+
+  await act(async ()=>{
+
+    fireEvent.change(getByLabelText("Choose time"),{target:{value:"18:00"}})
+  })
+
+  await act(async ()=>{
+    fireEvent.change(getByLabelText("Number of guests"),{target:{value:20}})
+
+  })
+
+  await act(async ()=>{
+
+    fireEvent.change(getByLabelText("Occasion"),{target:{value:"Birthday"}})
+  })
+
+
+  expect(queryByText("Can't book for more than 10 people")).toBeInTheDocument()
+  expect(queryByText("Required")).toBeInTheDocument()
+  expect(queryByText("Too short")).not.toBeInTheDocument()
+  
+})
+
+

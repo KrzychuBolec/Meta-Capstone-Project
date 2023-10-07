@@ -20,7 +20,7 @@ export const Hero = (props) =>{
                     We are a family owned Mediterranean restaurant focused on traditional recipes served with a modern twist
                     </p>
 
-                    <button className="mainButton">
+                    <button className="mainButton" aria-label="On Click">
                         <Link to="/Reservations">
                             Reserve a table
                         </Link>
